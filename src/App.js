@@ -65,7 +65,7 @@ class App extends Component {
     };
 
     render() {
-        const { loading, users, user } = this.state;
+        const { loading, users, user, repos } = this.state;
         return (
             <Router>
                 <div className="App">
@@ -101,7 +101,9 @@ class App extends Component {
                                     <User
                                         {...props}
                                         getUser={this.getUser}
+                                        getUserRepos={this.getUserRepos}
                                         user={user}
+                                        repos={repos}
                                         loading={loading}
                                     />
                                 )}
